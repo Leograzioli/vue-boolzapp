@@ -165,7 +165,13 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
+            currentContact: 0
+        }
+    },
+    methods: {
+        changeContact (index) {
+            this.currentContact = (index)
         }
     }
 }).mount("#app")

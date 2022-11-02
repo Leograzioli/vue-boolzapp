@@ -58,7 +58,11 @@
                 <div class="contacts-container">
 
                     <!-- contact -->
-                    <div v-for="(item, index) in contacts" class="contact-card ">
+                    <div 
+                    v-for="(item, index) in contacts" 
+                    @click="changeContact(index)" 
+                    class="contact-card"
+                    :class="currentContact === index ? 'active' : ''">
 
                         <!-- img -->
                         <div class="pic-card">
@@ -84,9 +88,9 @@
                  <!-- right container header -->
                 <div class="ct-header"> 
                     <div class="info">
-                        <img src="img/avatar_1.jpg" alt="">
+                        <img :src="`img/avatar` + contacts[currentContact].avatar + `.jpg`"alt="">
                         <div>
-                            <p>Michele</p>
+                            <p>{{contacts[currentContact].name}}</p>
                             <p class="gray-color"><small>Last seen today 12:00</small></p>
                         </div>
                     </div>
