@@ -139,8 +139,12 @@
                     </div>
 
                     <!-- icon  -->
-                    <div class="icon">
+                    <div v-if="newMessage === '' " class="icon">
                         <i class="fa-solid fa-microphone fa-xl"></i>
+                    </div>
+
+                    <div v-else class="icon" @click="sendMessage">
+                        <i class="fa-solid fa-paper-plane"></i>
                     </div>
 
                 </div>

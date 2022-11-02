@@ -221,6 +221,7 @@ img {
 .right-container .icon {
     width: 10%;
     color: gray;
+    cursor: pointer;
 
     display: flex;
     align-items: center;
