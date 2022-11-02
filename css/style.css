@@ -51,8 +51,19 @@ img {
     width: 100%;
 }
 
+
+/* color  */
 .gray-color {
     color: rgb(155, 155, 155);
+}
+
+/* bg-color  */
+.bg-green {
+    background-color: #d5f9ba;
+}
+
+.bg-white {
+    background-color: white;
 }
 
 /******* LEFT PART *******/
@@ -137,6 +148,10 @@ img {
     background-color: #e9ebeb;
 }
 
+.left-container .contact-card.active{
+    background-color: #e9ebeb;
+}
+
 .left-container .contact-card .txt-card {
     width: 100%;
 
@@ -165,6 +180,31 @@ img {
 .right-container .msg-container {
     width: 100%;
     height: calc(100% - 140px);
+    padding: 80px 100px;
+    overflow-y: scroll;
+}
+
+.right-container .msg-container .user {
+    display: flex;
+    justify-content: end;
+}
+
+.right-container .msg-container .bot {
+    display: flex;
+    justify-content: start;
+}
+
+.right-container .msg-container .msg {
+    min-width: 200px;
+    max-width: 300px;
+    min-height: 50px;
+    border-radius: 10px;
+    padding-left: 1rem;
+    hyphens: auto;
+
+    display: flex;
+    align-items: center;
+
 }
 
 /* write bar  */
