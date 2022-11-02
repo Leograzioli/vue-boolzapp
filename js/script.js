@@ -180,7 +180,7 @@ createApp({
                 this.newMessage = ""                
             }
             setTimeout(() => {
-                this.contacts[this.currentContact].messages.push({message: "ok", status: "recived"})
+                this.contacts[this.currentContact].messages.push({message: "ok", status: "received"})
             }, 1000);
         }
     }
