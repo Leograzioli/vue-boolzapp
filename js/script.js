@@ -166,12 +166,22 @@ createApp({
                     ],
                 }
             ],
-            currentContact: 0
+            currentContact: 0,
+            newMessage: ''
         }
     },
     methods: {
         changeContact (index) {
             this.currentContact = (index)
+        },
+        sendMessage () {
+            if ( this.newMessage.length >= 1){
+                this.contacts[this.currentContact].messages.push({message: this.newMessage, status: "sent"});
+                this.newMessage = ""                
+            }
+            setTimeout(() => {
+                this.contacts[this.currentContact].messages.push({message: "ok", status: "recived"})
+            }, 1000);
         }
     }
 }).mount("#app")
