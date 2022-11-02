@@ -15,7 +15,7 @@
 
 .container {
     width: 85%;
-    max-width: 1400px;
+    max-width: 1300px;
     height: 90%;
     margin: 0 auto;
     
@@ -192,16 +192,21 @@ img {
 }
 
 .right-container .msg-container .msg {
-    min-width: 200px;
+    position: relative;
+    min-width: 250px;
     max-width: 300px;
     min-height: 50px;
     border-radius: 10px;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
     hyphens: auto;
     margin-bottom: 5px;
+}
 
-    display: flex;
-    align-items: center;
+.right-container .msg .time-message {
+    position: absolute;
+    font-size: 0.7rem;
+    right: 5px;
+    bottom: 5px;
 }
 
 /* write bar  */

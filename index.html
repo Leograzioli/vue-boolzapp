@@ -92,7 +92,7 @@
                         <img :src="`img/avatar` + contacts[currentContact].avatar + `.jpg`"alt="">
                         <div>
                             <p>{{contacts[currentContact].name}}</p>
-                            <p class="gray-color"><small>Last seen today 12:00</small></p>
+                            <p class="gray-color"><small> </small></p>
                         </div>
                     </div>
                     <div class="header-icons">
@@ -114,6 +114,7 @@
                         :class="item.status === `sent` ? `bg-green` : `bg-white` "
                         >
                         {{item.message}}
+                        <div class="time-message">12:00</div>
                         </div>
                     </div>
 
