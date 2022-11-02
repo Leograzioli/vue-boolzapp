@@ -104,16 +104,16 @@
                 <!-- message container -->
                 <div class="msg-container">
 
-                    <div class="sent">
-                        <div class="msg bg-green">ciao</div>
+                    <div :class="contacts[currentContact].messages[0].status === `sent` ? 'sent' : 'recived'">
+                        <div class="msg" :class="contacts[currentContact].messages[0].status === `sent` ? `bg-green` : `bg-white` ">{{contacts[currentContact].messages[0].message}}</div>
                     </div>
 
-                    <div class="recived">
-                        <div class="msg bg-white">come va</div>
+                    <div :class="contacts[currentContact].messages[1].status === `sent` ? 'sent' : 'recived'">
+                        <div class="msg" :class="contacts[currentContact].messages[1].status === `sent` ? `bg-green` : `bg-white` ">{{contacts[currentContact].messages[1].message}}</div>
                     </div>
 
-                    <div class="sent">
-                        <div class="msg bg-green">bene</div>
+                    <div v-if="contacts[currentContact].messages.length > 2 " :class="contacts[currentContact].messages[2].status === `sent` ? 'sent' : 'recived'">
+                        <div class="msg" :class="contacts[currentContact].messages[2].status === `sent` ? `bg-green` : `bg-white` ">{{contacts[currentContact].messages[2].message}}</div>
                     </div>
                 </div>
 

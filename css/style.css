@@ -199,12 +199,12 @@ img {
     max-width: 300px;
     min-height: 50px;
     border-radius: 10px;
-    padding-left: 1rem;
+    padding: 0 1rem;
     hyphens: auto;
+    margin-bottom: 5px;
 
     display: flex;
     align-items: center;
-
 }
 
 /* write bar  */
