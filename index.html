@@ -58,149 +58,17 @@
                 <div class="contacts-container">
 
                     <!-- contact -->
-                    <div class="contact-card active">
+                    <div v-for="(item, index) in contacts" class="contact-card ">
 
                         <!-- img -->
                         <div class="pic-card">
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src="`img/avatar` + item.avatar + `.jpg`"alt="">
                         </div>
 
                         <!-- txt -->
                         <div class="txt-card">
                             <div>
-                                <p>Michele</p>
-                                <p class="gray-color"><small>last message</small></p>
-                            </div>
-
-                            <p class="gray-color"><small>12:00</small></p>
-                        </div>
-                    </div>
-
-                    <!-- contact -->
-                    <div class="contact-card">
-
-                        <!-- img -->
-                        <div class="pic-card">
-                            <img src="img/avatar_2.jpg" alt="">
-                        </div>
-
-                        <!-- txt -->
-                        <div class="txt-card">
-                            <div>
-                                <p>Michele</p>
-                                <p class="gray-color"><small>last message</small></p>
-                            </div>
-
-                            <p class="gray-color"><small>12:00</small></p>
-                        </div>
-                    </div>
-
-                    <!-- contact -->
-                    <div class="contact-card">
-
-                        <!-- img -->
-                        <div class="pic-card">
-                            <img src="img/avatar_3.jpg" alt="">
-                        </div>
-
-                        <!-- txt -->
-                        <div class="txt-card">
-                            <div>
-                                <p>Michele</p>
-                                <p class="gray-color"><small>last message</small></p>
-                            </div>
-
-                            <p class="gray-color"><small>12:00</small></p>
-                        </div>
-                    </div>
-                    <!-- contact -->
-                    <div class="contact-card">
-
-                        <!-- img -->
-                        <div class="pic-card">
-                            <img src="img/avatar_4.jpg" alt="">
-                        </div>
-
-                        <!-- txt -->
-                        <div class="txt-card">
-                            <div>
-                                <p>Michele</p>
-                                <p class="gray-color"><small>last message</small></p>
-                            </div>
-
-                            <p class="gray-color"><small>12:00</small></p>
-                        </div>
-                    </div>
-
-                    <!-- contact -->
-                    <div class="contact-card">
-
-                        <!-- img -->
-                        <div class="pic-card">
-                            <img src="img/avatar_5.jpg" alt="">
-                        </div>
-
-                        <!-- txt -->
-                        <div class="txt-card">
-                            <div>
-                                <p>Michele</p>
-                                <p class="gray-color"><small>last message</small></p>
-                            </div>
-
-                            <p class="gray-color"><small>12:00</small></p>
-                        </div>
-                    </div>
-
-                    <!-- contact -->
-                    <div class="contact-card">
-
-                        <!-- img -->
-                        <div class="pic-card">
-                            <img src="img/avatar_6.jpg" alt="">
-                        </div>
-
-                        <!-- txt -->
-                        <div class="txt-card">
-                            <div>
-                                <p>Michele</p>
-                                <p class="gray-color"><small>last message</small></p>
-                            </div>
-
-                            <p class="gray-color"><small>12:00</small></p>
-                        </div>
-                    </div>
-
-                    <!-- contact -->
-                    <div class="contact-card">
-
-                        <!-- img -->
-                        <div class="pic-card">
-                            <img src="img/avatar_7.jpg" alt="">
-                        </div>
-
-                        <!-- txt -->
-                        <div class="txt-card">
-                            <div>
-                                <p>Michele</p>
-                                <p class="gray-color"><small>last message</small></p>
-                            </div>
-
-                            <p class="gray-color"><small>12:00</small></p>
-                        </div>
-                    </div>
-
-                    <!-- contact -->
-                    <div class="contact-card">
-
-                        <!-- img -->
-                        <div class="pic-card">
-                            <img src="img/avatar_8.jpg" alt="">
-                        </div>
-
-                        <!-- txt -->
-                        <div class="txt-card">
-                            <div>
-                                <p>Michele</p>
+                                <p>{{item.name}}</p>
                                 <p class="gray-color"><small>last message</small></p>
                             </div>
 
@@ -232,15 +100,15 @@
                 <!-- message container -->
                 <div class="msg-container">
 
-                    <div class="user">
+                    <div class="sent">
                         <div class="msg bg-green">ciao</div>
                     </div>
 
-                    <div class="bot">
+                    <div class="recived">
                         <div class="msg bg-white">come va</div>
                     </div>
 
-                    <div class="user">
+                    <div class="sent">
                         <div class="msg bg-green">bene</div>
                     </div>
                 </div>

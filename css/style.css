@@ -184,12 +184,12 @@ img {
     overflow-y: scroll;
 }
 
-.right-container .msg-container .user {
+.right-container .msg-container .sent {
     display: flex;
     justify-content: end;
 }
 
-.right-container .msg-container .bot {
+.right-container .msg-container .recived {
     display: flex;
     justify-content: start;
 }
