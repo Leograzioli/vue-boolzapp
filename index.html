@@ -104,17 +104,13 @@
                 <!-- message container -->
                 <div class="msg-container">
 
-                    <div :class="contacts[currentContact].messages[0].status === `sent` ? 'sent' : 'recived'">
-                        <div class="msg" :class="contacts[currentContact].messages[0].status === `sent` ? `bg-green` : `bg-white` ">{{contacts[currentContact].messages[0].message}}</div>
+                    <div 
+                    v-for="(item, index) in contacts[currentContact].messages" 
+                    :class="item.status === `sent` ? 'sent' : 'recived'"
+                    >
+                        <div class="msg" :class="item.status === `sent` ? `bg-green` : `bg-white` ">{{item.message}}</div>
                     </div>
 
-                    <div :class="contacts[currentContact].messages[1].status === `sent` ? 'sent' : 'recived'">
-                        <div class="msg" :class="contacts[currentContact].messages[1].status === `sent` ? `bg-green` : `bg-white` ">{{contacts[currentContact].messages[1].message}}</div>
-                    </div>
-
-                    <div v-if="contacts[currentContact].messages.length > 2 " :class="contacts[currentContact].messages[2].status === `sent` ? 'sent' : 'recived'">
-                        <div class="msg" :class="contacts[currentContact].messages[2].status === `sent` ? `bg-green` : `bg-white` ">{{contacts[currentContact].messages[2].message}}</div>
-                    </div>
                 </div>
 
                 <!-- msg writter bar -->
