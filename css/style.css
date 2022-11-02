@@ -3,3 +3,81 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/******* COMMON *******/
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, #009688 15%, #dadbd3 15%);
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 85%;
+    max-width: 1300px;
+    height: 90%;
+    margin: 0 auto;
+
+    display: flex;
+}
+
+.ct-header {
+    width: 100%;
+    height: 70px;
+    background-color: #eaeaea;
+}
+
+img {
+    width: 100%;
+}
+
+/******* LEFT PART *******/
+.left-container {
+    border: 1px solid black;
+    width: 35%;
+    background-color: white;
+    height: 100%;
+}
+
+.left-container .warning-notify {
+    width: 100%;
+    height: 80px;
+    background-color: #8edafc;
+}
+
+.left-container .search-bar {
+    padding: 0.5rem;
+    background-color: #fafafa;
+}
+
+.left-container .search-bar input {
+    width: 100%;
+    height: 35px;
+}
+
+.left-container .contacts-container {
+    background-color: white;
+}
+
+.left-container .contact-card {
+    display: flex;
+    column-gap: 5px;
+    border-bottom: 1px solid black;
+    padding: 0.5rem;
+}
+
+.left-container .contact-card img {
+    width: 55px;
+}
+
+/******* RIGHT PART *******/
+.right-container {
+    border: 1px solid black;
+    width: 65%;
+    height: 100%;
+}
+
+.right-container .msg-container {
+    width: 100%;
+}
