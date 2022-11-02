@@ -62,7 +62,8 @@
                     v-for="(item, index) in contacts" 
                     @click="changeContact(index)" 
                     class="contact-card"
-                    :class="currentContact === index ? 'active' : ''">
+                    :class="currentContact === index ? 'active' : ''"
+                    >
 
                         <!-- img -->
                         <div class="pic-card">
@@ -73,7 +74,7 @@
                         <div class="txt-card">
                             <div>
                                 <p>{{item.name}}</p>
-                                <p class="gray-color"><small>last message</small></p>
+                                <p class="gray-color"><small>{{item.messages[item.messages.length - 1].message}}</small></p>
                             </div>
 
                             <p class="gray-color"><small>12:00</small></p>
@@ -105,22 +106,38 @@
                 <div class="msg-container">
 
                     <div 
-                    v-for="(item, index) in contacts[currentContact].messages" 
+                    v-for="(item) in contacts[currentContact].messages" 
                     :class="item.status === `sent` ? 'sent' : 'recived'"
                     >
-                        <div class="msg" :class="item.status === `sent` ? `bg-green` : `bg-white` ">{{item.message}}</div>
+                        <div 
+                        class="msg" 
+                        :class="item.status === `sent` ? `bg-green` : `bg-white` "
+                        >
+                        {{item.message}}
+                        </div>
                     </div>
 
                 </div>
 
                 <!-- msg writter bar -->
                 <div class="write-bar">
+
+                    <!-- icon -->
                     <div class="icon">
                         <i class="fa-regular fa-face-smile fa-xl"></i>
                     </div>
+
+                    <!-- message input  -->
                     <div class="txt-input">
-                        <input type="text" placeholder="Write a message" v-model.trim="newMessage" @keyup.enter="sendMessage">
+                        <input 
+                        type="text" 
+                        placeholder="Write a message" 
+                        v-model.trim="newMessage" 
+                        @keyup.enter="sendMessage"
+                        >
                     </div>
+
+                    <!-- icon  -->
                     <div class="icon">
                         <i class="fa-solid fa-microphone fa-xl"></i>
                     </div>
