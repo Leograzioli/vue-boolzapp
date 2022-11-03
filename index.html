@@ -72,7 +72,7 @@
                     @click="changeContact(index)" 
                     class="contact-card"
                     :class="currentContact === index ? 'active' : ''"
-                    v-show="item.name.includes(search)"
+                    v-show="item.name.toLowerCase().includes(search)"
                     >
 
                         <!-- img -->
@@ -84,7 +84,7 @@
                         <div class="txt-card">
                             <div>
                                 <p>{{item.name}}</p>
-                                <p class="gray-color">
+                                <p v-if="item.messages.length < 0" class="gray-color">
                                     <small>
                                         {{item.messages[item.messages.length - 1].message}}
                                     </small>
@@ -128,7 +128,7 @@
                 <div class="msg-container">
 
                     <div 
-                    v-for="(item) in contacts[currentContact].messages" 
+                    v-for="(item, index) in contacts[currentContact].messages" 
                     :class="item.status === `sent` ? 'sent' : 'recived'"
                     >
                         <div 
@@ -137,6 +137,9 @@
                         >
                             {{item.message}}
                             <div class="time-message">12:00</div>
+                            <div class="delete" @click="deleteMessage(index)">
+                                <i class="fa-solid fa-trash-can fa-sm"></i>
+                            </div>
                         </div>
                     </div>
 

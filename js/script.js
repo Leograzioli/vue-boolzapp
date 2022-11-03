@@ -167,6 +167,7 @@ createApp({
                 }
             ],
             currentContact: 0,
+            currentMessage: null,
             newMessage: '',
             search: ''
         }
@@ -183,6 +184,11 @@ createApp({
             setTimeout(() => {
                 this.contacts[this.currentContact].messages.push({message: "ok", status: "received"})
             }, 1000);
+        },
+        deleteMessage (index) {
+            this.currentMessage = (index)
+            this.contacts[this.currentContact].messages.splice(this.currentMessage, 1)
+
         }
     },
 }).mount("#app")

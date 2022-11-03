@@ -181,6 +181,18 @@ img {
     overflow-y: scroll;
 }
 
+.right-container .msg-container .delete {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: gray;
+}
+
+.right-container .msg-container .msg:hover .delete {
+    display: block;
+}
+
 .right-container .msg-container .sent {
     display: flex;
     justify-content: end;
