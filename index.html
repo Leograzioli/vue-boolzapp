@@ -104,7 +104,7 @@
                             <p>{{contacts[currentContact].name}}</p>
                             <p class="gray-color">
                                 <small>
-                                    last seen: {{contacts[currentContact].messages[0].date}}
+                                    last seen: {{contacts[currentContact].messages[contacts[currentContact].messages.length - 1].date}}
                                 </small>
                             </p>
                         </div>
