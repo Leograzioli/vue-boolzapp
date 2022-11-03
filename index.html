@@ -51,7 +51,7 @@
                     <div class="search-icon">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
-                    <input type="text" name="" id="" placeholder="cerca o inizia una nuova chat">
+                    <input type="text"  placeholder="cerca o inizia una nuova chat">
                 </div>
 
                 <!-- contacts container -->
@@ -74,7 +74,11 @@
                         <div class="txt-card">
                             <div>
                                 <p>{{item.name}}</p>
-                                <p class="gray-color"><small>{{item.messages[item.messages.length - 1].message}}</small></p>
+                                <p class="gray-color">
+                                    <small>
+                                        {{item.messages[item.messages.length - 1].message}}
+                                    </small>
+                                </p>
                             </div>
 
                             <p class="gray-color"><small>12:00</small></p>
@@ -92,7 +96,11 @@
                         <img :src="`img/avatar` + contacts[currentContact].avatar + `.jpg`"alt="">
                         <div>
                             <p>{{contacts[currentContact].name}}</p>
-                            <p class="gray-color"><small>last seen: {{contacts[currentContact].messages[0].date}}</small></p>
+                            <p class="gray-color">
+                                <small>
+                                    last seen: {{contacts[currentContact].messages[0].date}}
+                                </small>
+                            </p>
                         </div>
                     </div>
                     <div class="header-icons">
