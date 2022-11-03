@@ -209,7 +209,7 @@ img {
     max-width: 300px;
     min-height: 50px;
     border-radius: 10px;
-    padding: 1rem 1rem;
+    padding: 0.9rem 1rem 1.3rem;
     hyphens: auto;
     margin-bottom: 5px;
 }

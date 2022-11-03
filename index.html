@@ -15,6 +15,9 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+     <!-- luxon -->
+     <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.3/build/global/luxon.min.js"></script>
+
 </head>
 <body>
 
@@ -91,7 +94,7 @@
                                 </p>
                             </div>
 
-                            <p class="gray-color"><small>12:00</small></p>
+                            <p class="gray-color"><small>{{item.messages[item.messages.length - 1].date}}</small></p>
                         </div>
                     </div>
                 </div>
@@ -136,7 +139,7 @@
                         :class="item.status === `sent` ? `bg-green` : `bg-white` "
                         >
                             {{item.message}}
-                            <div class="time-message">12:00</div>
+                            <div class="time-message gray-color">{{item.date}}</div>
                             <div class="delete" @click="deleteMessage(index)">
                                 <i class="fa-solid fa-trash-can fa-sm"></i>
                             </div>
