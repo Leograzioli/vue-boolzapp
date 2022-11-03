@@ -52,6 +52,10 @@ img {
     color: gray;
 }
 
+.max_width {
+    max-width: 180px;
+}
+
 /* color  */
 .gray-color {
     color: rgb(155, 155, 155);
