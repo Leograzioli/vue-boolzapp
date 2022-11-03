@@ -183,16 +183,6 @@ createApp({
             setTimeout(() => {
                 this.contacts[this.currentContact].messages.push({message: "ok", status: "received"})
             }, 1000);
-        },
-        searchContacts () {
-           this.contacts.forEach(element => {
-                if (!element.name.includes(this.search)) {
-                    element.visible = false;
-                }
-           });
         }
     },
-    created () {
-      this.searchContacts();
-    }
 }).mount("#app")
