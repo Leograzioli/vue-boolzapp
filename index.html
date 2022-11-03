@@ -26,10 +26,14 @@
 
                 <!-- left container header -->
                 <div class="ct-header">
+
+                    <!-- user info -->
                     <div class="info">
                         <img src="img/avatar_io.jpg" alt="">
                         <span>Sofia</span>
                     </div>
+
+                    <!-- icons  -->
                     <div class="header-icons">
                         <i class="fa-solid fa-circle-notch"></i>
                         <i class="fa-solid fa-message"></i>
@@ -92,6 +96,8 @@
 
                  <!-- right container header -->
                 <div class="ct-header"> 
+
+                    <!-- contact info  -->
                     <div class="info">
                         <img :src="`img/avatar` + contacts[currentContact].avatar + `.jpg`"alt="">
                         <div>
@@ -103,6 +109,8 @@
                             </p>
                         </div>
                     </div>
+
+                    <!-- icons -->
                     <div class="header-icons">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <i class="fa-solid fa-paperclip"></i>
@@ -121,8 +129,8 @@
                         class="msg" 
                         :class="item.status === `sent` ? `bg-green` : `bg-white` "
                         >
-                        {{item.message}}
-                        <div class="time-message">12:00</div>
+                            {{item.message}}
+                            <div class="time-message">12:00</div>
                         </div>
                     </div>
 
@@ -154,7 +162,6 @@
                     <div v-else class="icon" @click="sendMessage">
                         <i class="fa-solid fa-paper-plane"></i>
                     </div>
-
                 </div>
             </div>
         </div>
