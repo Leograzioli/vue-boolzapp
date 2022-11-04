@@ -186,6 +186,10 @@ createApp({
             setTimeout(() => {
                 this.contacts[bot].messages.push({message: "ok", status: "received", date: this.createDate()})
             }, 1000);
+
+            this.$nextTick(() => {
+                this.$refs.chatWindow.scrollTop = this.$refs.chatWindow.scrollHeight
+              })
         },
         deleteMessage (index) {
             this.currentMessage = index
