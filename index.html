@@ -15,8 +15,8 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-     <!-- luxon -->
-     <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.3/build/global/luxon.min.js"></script>
+    <!-- luxon -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.3/build/global/luxon.min.js"></script>
 
 </head>
 <body>
@@ -94,7 +94,11 @@
                                 </p>
                             </div>
 
-                            <p class="gray-color"><small>{{item.messages[item.messages.length - 1].date}}</small></p>
+                            <p class="gray-color">
+                                <small>
+                                    {{item.messages[item.messages.length - 1].date}}
+                                </small>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -132,7 +136,7 @@
 
                     <div 
                     v-for="(item, index) in contacts[currentContact].messages" 
-                    :class="item.status === `sent` ? 'sent' : 'recived'"
+                    :class="`${item.status}`"
                     >
                         <div 
                         class="msg" 
@@ -145,7 +149,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
 
                 <!-- msg writter bar -->
